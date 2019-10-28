@@ -39,8 +39,8 @@ class FilmList extends Component {
   render() {
     const filmDetails = this.state.films.map(film => {
       return (
-        <Film name={ film.name } key={ film.id }>
-        { film.url }
+        <Film link={ film.url } key={ film.id }>
+        { film.name }
         </Film>
       );
     })
@@ -48,10 +48,17 @@ class FilmList extends Component {
     return (
       <main>
         <h1>Upcoming Film Releases for UK</h1>
-        { filmDetails }
-      </main>
 
+        <div className="film-list">
+        { filmDetails }
+        </div>
+
+        <a href="https://www.imdb.com/calendar/?region=gb">
+        View more upcoming releases
+        </a>
+      </main>
     );
+
   }
 
 }
