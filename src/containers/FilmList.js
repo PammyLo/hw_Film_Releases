@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Film from '../components/Film';
 
 class FilmList extends Component {
@@ -46,17 +46,24 @@ class FilmList extends Component {
     })
 
     return (
-      <main>
-        <h1>Upcoming Film Releases for UK</h1>
+      <Fragment>
 
-        <div className="film-list">
-        { filmDetails }
-        </div>
+        <header>
+          <h1>Upcoming Film Releases for UK</h1>
+        </header>
 
-        <a href="https://www.imdb.com/calendar/?region=gb">
-        View more upcoming releases
-        </a>
-      </main>
+
+        <main className="film-list">
+          { filmDetails }
+        </main>
+
+        <section className="more-link">
+          <p><a href="https://www.imdb.com/calendar/?region=gb">
+          View more upcoming releases
+          </a></p>
+        </section>
+
+      </Fragment>
     );
 
   }

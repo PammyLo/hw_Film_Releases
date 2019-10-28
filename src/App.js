@@ -4,7 +4,7 @@ import FilmList from './containers/FilmList';
 
 function App() {
   return (
-    <FilmList />
+      <FilmList />
   );
 }
 
